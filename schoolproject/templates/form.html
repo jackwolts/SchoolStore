@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form Page</title>
+<style>
+.contact-form{
+    max-width:350px;
+    margin:auto;
+    border-radius:5px;
+    background:#96bb72;
+    padding:20px;
+
+}
+input[type=text], select{
+    width:100%;
+    padding:8px 15px;
+    margin:8px 0;
+    display:inline-block;
+    border:1px solid #ccc;
+    border-radius:4px;
+    box-sizing:border-box;
+
+}
+input[type=submit]{
+   width:40%;
+   background:purple;
+   color:white;
+   padding:10px;
+   margin:5px 0;
+   border:none;
+   border-radius:10px;
+   cursor:pointer;
+}
+input[type=submit]:hover{
+   background:#000;
+}
+.logout-link {
+
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+
+.logout-link:hover {
+
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+
+
+</style>
+
+</head>
+<body style="background-color:Aqua;">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="contact-form">
+    <form action="form" method="post">
+        {% csrf_token %}
+         <label for="name">name</label>
+         <input type="text" name="username" placeholder="Username"><br>
+        <label for="Age">Age</label>
+         <input type="text" name="age" placeholder="enter your age"><br>
+        <label for="email">email</label>
+         <input type="email" name="email" placeholder="enter your email"><br>
+
+
+        <div>
+           <h4 style="font-size:20px">Gender</h4>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+           <label for="address">Address</label>
+
+            <textarea name="address" id="address" cols="20" rows="2"></textarea>
+
+
+        </div>
+
+        <div>
+        <label for="phone">Phone</label>
+
+
+            <input type="phone" placeholder="9778****">
+       </div>
+              <div>
+                   <h4>Date of birth</h4>
+                     <select name="month">
+                         <option value="month">Month</option>
+                          <option value="january">January</option>
+                          <option value="february">February</option>
+
+                     </select>
+                     <select name="days">
+                         <option value="days">Days</option>
+                          <option value="1">1</option>
+                          <option value="2">3</option>
+
+                     </select>
+                   <select name="year">
+                         <option value="year">Year</option>
+                          <option value="1985">1985</option>
+                          <option value="1988">1988</option>
+                         <option value="1989">1989</option>
+
+                     </select>
+
+       </div>
+       <div>
+
+           <label for="department">Department</label>
+           <select name="department" id="department">
+               <option value="commerce">commerce</option>
+               <option value="computer science">computer science</option>
+               <option value="mathematics">mathematics</option>
+               <option value="humanities">humanities</option>
+               <option value="physics">physics</option>
+           </select>
+       </div>
+         <div>
+
+           <label for="courses">Courses</label>
+           <select name="courses" id="courses">
+               <option value="BTech">BTech</option>
+               <option value=" CSE"> CSE</option>
+               <option value="BSc">BSc</option>
+               <option value=" MSc"> MSc</option>
+               <option value="MBA">MBA</option>
+           </select>
+       </div>
+         <div>
+
+           <label for="purpose">Purpose</label>
+           <select name="purpose" id="purpose">
+               <option value="Mobile application developer">Mobile application developer</option>
+               <option value="  Information systems manager"> Information systems manager</option>
+               <option value="System engineer">System engineer</option>
+               <option value="Network security engineer">Network security engineer</option>
+               <option value=" Information security analyst"> Information security analyst</option>
+           </select>
+       </div>
+        <div>
+            <h4>Materials</h4>
+            <input type="checkbox" name="materials" id="materials">
+            <label for="pen">Pen</label>
+            <input type="checkbox" name="materials" id="note book">
+            <label for="note book">Note book</label>
+            <input type="checkbox" name="materials" id="papper">
+            <label for="papper">Papper</label>
+        </div>
+
+
+
+        <input type="submit">
+       <a href="http://127.0.0.1:8000" class="logout-link">Logout</a>
+
+
+
+
+
+
+    </form>
+    </div>
+</body>
+</html>
